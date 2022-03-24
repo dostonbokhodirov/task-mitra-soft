@@ -8,17 +8,13 @@ import uz.doston.taskmitrasoft.response.DataDto;
 import uz.doston.taskmitrasoft.response.ResponseEntity;
 
 /**
- * @param <D> -> DTO
  * @param <CD> -> Create DTO
  * @param <UD> -> Update DTO
- * @param <C> -> Criteria
  */
 
 public interface GenericCrudController<
-        D extends GenericDto,
         CD extends BaseDto,
-        UD extends GenericDto,
-        C extends BaseCriteria> extends GenericController<D, C> {
+        UD extends GenericDto> {
 
     ResponseEntity<DataDto<Long>> create(CD dto);
 
